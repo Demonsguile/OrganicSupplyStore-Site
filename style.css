@@ -187,7 +187,114 @@ a {
 }
 
 /* ==========================================================
-   6. FOOTER
+   6. GUIDE / ARTICLE PAGES
+   ========================================================== */
+.guide {
+  padding: 56px 0 80px;
+}
+
+.guide-container {
+  max-width: 720px;
+}
+
+.breadcrumb {
+  font-size: 0.85rem;
+  opacity: 0.65;
+  margin-bottom: 24px;
+}
+
+.breadcrumb a {
+  text-decoration: underline;
+}
+
+.guide h1 {
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  color: var(--color-soil);
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.guide-meta {
+  font-size: 0.85rem;
+  opacity: 0.6;
+  margin-bottom: 24px;
+}
+
+.top-disclosure {
+  background: rgba(107, 122, 94, 0.1);
+  border-left: 3px solid var(--color-sage);
+  padding: 14px 18px;
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin-bottom: 32px;
+  border-radius: 0 4px 4px 0;
+}
+
+.guide p {
+  margin-bottom: 20px;
+  font-size: 1.05rem;
+}
+
+.guide ul, .guide ol {
+  margin: 0 0 24px 24px;
+}
+
+.guide li {
+  margin-bottom: 10px;
+  font-size: 1.05rem;
+}
+
+.guide h2 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--color-soil);
+  margin: 40px 0 16px;
+}
+
+.guide h3 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: var(--color-sage-dark);
+  margin-bottom: 10px;
+}
+
+.product-pick {
+  background: white;
+  border: 1px solid rgba(59, 46, 35, 0.1);
+  border-radius: 6px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.product-pick p {
+  font-size: 0.98rem;
+  margin-bottom: 14px;
+}
+
+.affiliate-link {
+  display: inline-block;
+  background: var(--color-clay);
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 10px 18px;
+  border-radius: 4px;
+  transition: background 0.15s ease;
+}
+
+.affiliate-link:hover {
+  background: var(--color-clay-dark);
+}
+
+@media (max-width: 700px) {
+  .guide h1 {
+    font-size: 1.9rem;
+  }
+}
+
+/* ==========================================================
+   7. FOOTER
    ========================================================== */
 .site-footer {
   background: var(--color-soil);
