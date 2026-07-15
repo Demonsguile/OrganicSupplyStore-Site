@@ -1,0 +1,248 @@
+/* ==========================================================
+   1. DESIGN TOKENS (our palette + fonts, defined once, used everywhere)
+   ========================================================== */
+:root {
+  --color-cream: #F5F0E6;
+  --color-soil: #3B2E23;
+  --color-sage: #6B7A5E;
+  --color-sage-dark: #4E5A44;
+  --color-clay: #C1602A;
+  --color-clay-dark: #A34E20;
+  --color-text: #2E2A24;
+
+  --font-display: Georgia, 'Times New Roman', serif;
+  --font-body: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
+}
+
+/* ==========================================================
+   2. RESET (browsers add weird default spacing — we zero it out
+      so OUR spacing choices are the only ones in play)
+   ========================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background: var(--color-cream);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ==========================================================
+   3. HEADER
+   ========================================================== */
+.site-header {
+  background: var(--color-cream);
+  border-bottom: 1px solid rgba(59, 46, 35, 0.12);
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--color-soil);
+}
+
+.logo span {
+  color: var(--color-clay);
+}
+
+.main-nav {
+  display: flex;
+  gap: 28px;
+}
+
+.main-nav a {
+  font-size: 0.95rem;
+  color: var(--color-soil);
+  opacity: 0.8;
+}
+
+.main-nav a:hover {
+  opacity: 1;
+  color: var(--color-clay);
+}
+
+/* ==========================================================
+   4. HERO
+   ========================================================== */
+.hero {
+  padding: 96px 0 88px;
+  background: linear-gradient(180deg, var(--color-cream) 0%, #EFE7D6 100%);
+}
+
+.hero-inner {
+  max-width: 620px;
+}
+
+.eyebrow {
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-sage-dark);
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  line-height: 1.15;
+  color: var(--color-soil);
+  margin-bottom: 24px;
+}
+
+.hero-sub {
+  font-size: 1.1rem;
+  color: var(--color-text);
+  opacity: 0.85;
+  margin-bottom: 32px;
+  max-width: 520px;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: var(--color-clay);
+  color: white;
+  font-weight: 600;
+  padding: 14px 28px;
+  border-radius: 4px;
+  transition: background 0.15s ease;
+}
+
+.btn-primary:hover {
+  background: var(--color-clay-dark);
+}
+
+/* ==========================================================
+   5. CATEGORY GRID
+   ========================================================== */
+.categories {
+  padding: 80px 0;
+}
+
+.categories h2 {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  color: var(--color-soil);
+  margin-bottom: 36px;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.category-card {
+  background: white;
+  border: 1px solid rgba(59, 46, 35, 0.1);
+  border-radius: 6px;
+  padding: 28px;
+}
+
+.category-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: var(--color-sage-dark);
+  margin-bottom: 10px;
+}
+
+.category-card p {
+  font-size: 0.95rem;
+  opacity: 0.85;
+  margin-bottom: 16px;
+}
+
+.card-link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-clay);
+}
+
+.card-link:hover {
+  color: var(--color-clay-dark);
+}
+
+/* ==========================================================
+   6. FOOTER
+   ========================================================== */
+.site-footer {
+  background: var(--color-soil);
+  color: var(--color-cream);
+  padding: 40px 0;
+  text-align: center;
+}
+
+.disclosure {
+  font-size: 0.85rem;
+  opacity: 0.75;
+  max-width: 500px;
+  margin: 0 auto 12px;
+}
+
+.copyright {
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+/* ==========================================================
+   7. RESPONSIVE (mobile) — most of your visitors will be on
+      phones, so the site needs to hold up at narrow widths
+   ========================================================== */
+@media (max-width: 700px) {
+  .header-inner {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .main-nav {
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero {
+    padding: 64px 0 56px;
+    text-align: center;
+  }
+
+  .hero-inner {
+    max-width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-sub {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .category-grid {
+    grid-template-columns: 1fr;
+  }
+}
